@@ -15,7 +15,7 @@ module.exports = baseUrl => `
   <h4>Fonts:</h4>
   <ul>${fontList().map(font => '<li>'+font+'</li>')}</ul>
   <h4>Requests:</h4>
-  <p><code>/< fontname-lower-case >/< glyphname ></code></p>
+  <p><code>${baseUrl}/< fontname-lower-case >/< glyphname ></code></p>
   <h4>Query params:</h4>
   <p>style - only for FontAwesome5 (brands, solid or by default - regular). PLEASE SET FOR FontAwesome5! if no glyph in <a target="_blank" href="https://github.com/oblador/react-native-vector-icons/blob/master/glyphmaps/FontAwesome5Free_meta.json">GlyphMap</a> - will show this page</p>
   <p>size - in dp... or in px if no pixel ratio (=1)</p>
