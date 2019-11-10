@@ -5,6 +5,13 @@ const canvas = require('./canvas');
 
 const router = express.Router();
 
+let baseUrl;
+
+module.exports = rootUri => {
+  baseUrl = rootUri;
+  return router
+};
+
 router.get('/:font/:glyph', (req, res, next) => {
   const font = helpers.fontBySlug(req.params.font);
   if (!font) return next();
@@ -32,11 +39,9 @@ router.get('/:font', (req, res, next) => {
 });
 
 router.get('/*', (req, res) => {
-  res.send(require('./homepage'));
+  res.send(require('./homepage')(baseUrl));
 });
 
 router.all('*', (req, res) => {
   res.status(404).end();
 });
-
-module.exports = router;

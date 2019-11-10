@@ -4,7 +4,7 @@ const { registerFont } = require('./canvas');
 
 const rnviVersion = require('./package').dependencies["react-native-vector-icons"];
 
-const rnviPath = path.resolve('node_modules', 'react-native-vector-icons');
+const rnviPath = path.resolve(__dirname, 'node_modules', 'react-native-vector-icons');
 
 const rnviFontsPath = path.resolve(rnviPath, 'Fonts');
 

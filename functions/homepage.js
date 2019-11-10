@@ -1,6 +1,6 @@
 const { rnviVersion, fontList } = require('./rnvi');
 
-module.exports = `
+module.exports = baseUrl => `
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,10 +23,10 @@ module.exports = `
   <p>color - <a target="_blank" href="https://www.w3schools.com/colors/colors_names.asp">HTML color name</a> or <strong>rgb(0,0,0)</strong> or <strong>rgba(0,0,0,.5)</strong> style. Warning: DO NOT PASS #000000 FORMAT !!!</p>
   <p>output - <strong>uri</strong> - is a JSON object <code>{ uri: data:image/png;base64,... }, <strong>base64</strong> - is just <i>data:image/png;base64,...</i> and by default - <strong>raw</strong> - is a png file with MIME image/png</code></p>
   <h4>Examples:</h4>
-  <p><a target="_blank" href="/ionicons/md-more?size=24&ratio=2&color=blue">/ionicons/md-more?size=24&ratio=2&color=blue</a></p>
-  <p><a target="_blank" href="/fontawesome5free/github?style=brands&size=100&color=grey">/fontawesome5free/github?style=brands&size=100&color=grey</a></p>
-  <p><a target="_blank" href="/entypo/bell?output=uri">/entypo/bell?output=uri</a></p>
-  <p><a target="_blank" href="/materialcommunityicons/airbag?color=rgb(20,200,20)&size=25&ratio=3&output=base64">/materialcommunityicons/airbag?color=rgb(20,200,20)&size=25&ratio=3&output=base64</a></p>
+  <p><a target="_blank" href="${baseUrl}/ionicons/md-more?size=24&ratio=2&color=blue">${baseUrl}/ionicons/md-more?size=24&ratio=2&color=blue</a></p>
+  <p><a target="_blank" href="${baseUrl}/fontawesome5free/github?style=brands&size=100&color=grey">${baseUrl}/fontawesome5free/github?style=brands&size=100&color=grey</a></p>
+  <p><a target="_blank" href="${baseUrl}/entypo/bell?output=uri">${baseUrl}/entypo/bell?output=uri</a></p>
+  <p><a target="_blank" href="${baseUrl}/materialcommunityicons/airbag?color=rgb(20,200,20)&size=25&ratio=3&output=base64">${baseUrl}/materialcommunityicons/airbag?color=rgb(20,200,20)&size=25&ratio=3&output=base64</a></p>
 </body>
 </html>
 `;

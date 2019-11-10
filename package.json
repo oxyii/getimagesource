@@ -5,11 +5,7 @@
   "author": "Ruslan Baybekov <oxyii.dev@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node index.js"
-  },
-  "dependencies": {
-    "canvas": "^2.6.0",
-    "express": "^4.17.1",
-    "react-native-vector-icons": "^6.6.0"
+    "start": "node index.js",
+    "postinstall": "cd functions && npm install"
   }
 }

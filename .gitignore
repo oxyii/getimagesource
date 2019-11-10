@@ -1,2 +1,5 @@
+*.log
+.firebaserc
+firebase.json
 .idea
 node_modules
