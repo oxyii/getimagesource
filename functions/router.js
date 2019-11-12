@@ -27,7 +27,7 @@ router.get('/:font/:glyph', (req, res, next) => {
 
   const result = canvas(helpers.getFontFamily(font, style), size, color, glyphCode, output !== 'raw');
   if (output === 'raw') return res.type('png').send(result);
-  output === 'uri' ? res.json({ uri: result }) : res.send(result);
+  output === 'uri' ? res.json({ uri: result }) : res.type('text/plain').send(result);
 });
 
 router.get('/:font', (req, res, next) => {
